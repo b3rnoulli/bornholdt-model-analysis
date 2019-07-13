@@ -1,7 +1,7 @@
 clear
 clc
 
-names = {'beta', 'alpha', 'j', 'kappa_volume_diff_nnz','range','moore','datasource'};
+names = {'beta', 'alpha', 'j', 'kappa_volume_diff_nnz_asymmetric','range','moore','datasource'};
 executions = convert_to_cell(1:10);
 
 params = build_multi_params({1.5, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions);
