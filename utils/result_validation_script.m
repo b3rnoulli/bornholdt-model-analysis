@@ -104,9 +104,12 @@ params = build_multi_params({2.5, 30, [1.0 0], 0.1,  [50000 300000], false, 'PRO
 params = build_multi_params({2.5, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
 params = build_multi_params({2.5, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
 
-missing_file_names = check_file_exists(@bornholdt_file_path_resolver, @bornholdt_file_name_resolver, params);
+[missing_file_names, files_without_mfdfa ]= get_invalid_files(@bornholdt_file_path_resolver, @bornholdt_file_name_resolver, params);
 
 for i=1:1:length(missing_file_names)
-   fprintf('[rasult_validation_script] Missing file [%s] \n', missing_file_names{i}); 
+   fprintf('[result_validation_script] Missing file [%s] \n', missing_file_names{i}); 
 end
 
+for i=1:1:length(files_without_mfdfa)
+   fprintf('[result_validation_script] Missing mfdfa in file [%s] \n', files_without_mfdfa{i}); 
+end
