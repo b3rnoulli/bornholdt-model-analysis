@@ -1,18 +1,55 @@
 clear
 clc
 
+names = {'beta', 'alpha', 'j', 'kappa','range','moore','datasource'};
+executions = convert_to_cell(1:10);
 
+params = build_multi_params({0.5, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions);
+params = build_multi_params({0.5, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+params = build_multi_params({0.5, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+params = build_multi_params({0.5, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+params = build_multi_params({0.6, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+params = build_multi_params({0.6, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+params = build_multi_params({0.6, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+params = build_multi_params({0.6, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
 
-names = {'beta', 'datasource', 'alpha', 'j', 'kappa','moore'};
-values = {1.6, 'PROMETHEUS', 30, [1.0 0], 0.0, true};
-executions = convert_to_cell(1:5);
-params = build_multi_params(values, names, 'execution', executions);
-% params = build_multi_params({1.6, 30, [1.0 0], 0.1, false}, names, 'execution', executions,params);
-% params = build_multi_params({1.6, 30, [1.0 0], 0.25, false}, names, 'execution', executions,params);
-% params = build_multi_params({1.6, 30, [1.0 0], 0.5, false}, names, 'execution', executions,params);
-% params = build_multi_params({1.6, 30, [1.0 0], 1, false}, names, 'execution', executions,params);
+% params = build_multi_params({0.7, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions);
+% params = build_multi_params({0.7, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({0.7, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({0.7, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({0.8, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({0.8, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({0.8, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({0.8, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% 
+% params = build_multi_params({0.9, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions);
+% params = build_multi_params({0.9, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({0.9, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({0.9, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.0, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.0, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.0, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.0, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% 
+% params = build_multi_params({1.1, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions);
+% params = build_multi_params({1.1, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.1, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.1, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.2, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.2, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.2, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.2, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% 
+% params = build_multi_params({1.3, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions);
+% params = build_multi_params({1.3, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.3, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.3, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.4, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.4, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.4, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+% params = build_multi_params({1.4, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
 
-for i=1:length(params)
+parfor i=1:length(params)
     calculate_mfdfa(@bornholdt_file_path_resolver, @bornholdt_file_name_resolver, params(i));
 end
 
