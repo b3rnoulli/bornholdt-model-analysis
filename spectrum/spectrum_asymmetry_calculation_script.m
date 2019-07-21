@@ -7,4 +7,4 @@ executions = convert_to_cell(1);
 
 params = build_multi_params(values, names, 'execution',executions);
 
-calculate_spectrum_width(@bornholdt_file_path_resolver, @bornholdt_file_name_resolver, params);
+calculate_spectrum_asymmetry(@bornholdt_file_path_resolver, @bornholdt_file_name_resolver, params);

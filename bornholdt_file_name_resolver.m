@@ -45,7 +45,18 @@ if check_property_exists(params, 'execution')
     file_name = [file_name,'-',num2str(params.execution)];
 end
 
-if check_property_exists(params, 'scales')
-    file_name = [file_name,'-',num2str(params.scales(1)),'-',num2str(params.scales(2))];
+if check_property_exists(params,'should_append_window_suffix') && params.should_append_window_suffix == true ...
+        && has_window_data(params)
+    file_name = [file_name,'-fq-windowed-',num2str(params.window_range(1)),'-',num2str(params.window_range(2)),...
+        '-size-',num2str(params.window_size),'-step-',num2str(params.window_step)];
 end
+
+if check_property_exists(params, 'scales') && check_property_exists(params,'should_append_scale_suffix') && params.should_append_scale_suffix == true
+    file_name = [file_name,'-scales-',num2str(params.scales(1)),'-',num2str(params.scales(2))];
+end
+end
+
+function [result] = has_window_data(params)
+result = check_property_exists(params,'window_range') && check_property_exists(params,'window_size') ...
+        && check_property_exists(params,'window_step');
 end
