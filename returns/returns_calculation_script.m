@@ -89,6 +89,11 @@ params = build_multi_params({2.1, 30, [1.0 0], 0.1,  [50000 300000], false, 'PRO
 params = build_multi_params({2.1, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
 params = build_multi_params({2.1, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
 
+params = build_multi_params({2.2, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+params = build_multi_params({2.2, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+params = build_multi_params({2.2, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+params = build_multi_params({2.2, 30, [1.0 0], 0.5,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
+
 params = build_multi_params({2.3, 30, [1.0 0], 0.05, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
 params = build_multi_params({2.3, 30, [1.0 0], 0.1,  [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
 params = build_multi_params({2.3, 30, [1.0 0], 0.25, [50000 300000], false, 'PROMETHEUS'}, names,  'execution', executions, params);
